@@ -119,7 +119,7 @@ const siteData: SiteData = {
         ],
         testimonials: [],
         cta: null,
-        sectionsOrder: ['hero', 'projects', 'experience', 'skills', 'services', 'education', 'contact'],
+        sectionsOrder: ['hero', 'performance', 'projects', 'experience', 'skills', 'services', 'education', 'contact'],
       },
     },
   ],
