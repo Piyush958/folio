@@ -8,6 +8,8 @@
 .hero .punch { color: var(--accent); font-weight: 700; }
 
 .hero-grid { display: grid; gap: 12px; }
+.highlight-rail { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.rail-item { padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: var(--text); font-size: 14px; }
 
 .metric-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; }
 .metric { padding: 12px; border-radius: 14px; border: 1px solid var(--border); background: var(--panel-strong); }
@@ -41,8 +43,8 @@
 .section { position: relative; }
 .section::before { content: ''; position: absolute; inset: -2px; border-radius: calc(var(--radius) + 2px); padding: 1px; background: linear-gradient(135deg, rgba(255,124,229,0.25), rgba(124,240,255,0.18)); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0.9; pointer-events: none; }
 
-.section.motion { transform-style: preserve-3d; }
-.section.motion:hover { box-shadow: 0 18px 40px rgba(0,0,0,0.4); }
+.section.motion { transform-style: flat; }
+.section.motion:hover { box-shadow: 0 12px 28px rgba(0,0,0,0.28); }
 
 .bg-canvas { position: fixed !important; inset: 0; z-index: -2; opacity: 0.38; filter: blur(1px) saturate(1.15); }
 

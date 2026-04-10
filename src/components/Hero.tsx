@@ -1,7 +1,7 @@
 ﻿import { motion } from 'framer-motion'
 import type { HeroContent, Stat } from '../types'
 // Minimal hero (no canvas/3D)
-
+const highlights = ['Shopify speed & builds', 'React + TypeScript UIs', 'Django/Node APIs']
 const fadeUp = { hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0 } }
 
 const Hero = ({ heroContent, stats, heroImage }: { heroContent: HeroContent; stats: Stat[]; heroImage?: string }) => {
@@ -19,6 +19,9 @@ const Hero = ({ heroContent, stats, heroImage }: { heroContent: HeroContent; sta
             </h1>
             <p className="subtitle">{heroContent.punch}</p>
             <p>{heroContent.blurb}</p>
+            <div className="highlight-rail">
+              {highlights.map((h) => (<span className="rail-item" key={h}>{h}</span>))}
+            </div>
           </motion.div>
 
           <motion.div className="button-row" variants={fadeUp} initial="hidden" animate="show" transition={{ delay: 0.08 }}>
