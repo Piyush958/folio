@@ -30,7 +30,11 @@ const Projects = ({ projects }: { projects: ProjectItem[] }) => {
             {p.image && <div className="gallery-thumb" style={{ backgroundImage: `url(${p.image})`, height: 140 }} />}
             <h3>{p.title}</h3>
             <p>{p.desc}</p>
-            {p.link && <a className="btn" href={p.link} target="_blank" rel="noreferrer">View</a>}
+            {p.link && p.link !== '#' && (
+              <a className="btn" href={p.link} target="_blank" rel="noreferrer">
+                View
+              </a>
+            )}
           </div>
         ))}
       </div>

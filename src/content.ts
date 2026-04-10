@@ -113,9 +113,9 @@ const siteData: SiteData = {
         ],
         gallery: [],
         projects: [
-          { title: 'Perf Booster', desc: 'Core Web Vitals uplift for D2C brand', link: '#', image: '' },
-          { title: 'Launch Site', desc: 'Product launch page with clear CTA and analytics', link: '#', image: '' },
-          { title: 'Ops Dashboard', desc: 'React + API dashboard for internal ops', link: '#', image: '' },
+          { title: 'Perf Booster', desc: 'Core Web Vitals uplift for D2C brand', link: '', image: '' },
+          { title: 'Launch Site', desc: 'Product launch page with clear CTA and analytics', link: '', image: '' },
+          { title: 'Ops Dashboard', desc: 'React + API dashboard for internal ops', link: '', image: '' },
         ],
         testimonials: [],
         cta: null,
