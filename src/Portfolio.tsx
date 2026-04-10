@@ -10,6 +10,10 @@ import FAQ from './components/FAQ'
 import Pricing from './components/Pricing'
 import type { PortfolioContent } from './types'
 import BackgroundScene from './components/BackgroundScene'
+import SectionHeader from './components/SectionHeader'
+
+const beforeImg = '/beforeopt.jpg'
+const afterImg = '/afteropt.jpg'
 
 const Portfolio = ({ content }: { content: PortfolioContent }) => {
   useEffect(() => {
@@ -28,6 +32,24 @@ const Portfolio = ({ content }: { content: PortfolioContent }) => {
 
   const renderSection = (key: string) => {
     switch (key) {
+      case 'performance':
+        return (
+          <section className="section motion" key={key} id="performance">
+            <SectionHeader title="Performance before/after" detail="PSI screenshots that show the delta" />
+            <div className="optim-grid">
+              <div className="card">
+                <h3>Before</h3>
+                <p className="muted">Pre-optimization</p>
+                <div className="optim-img" style={{ backgroundImage: `url(${beforeImg})` }} />
+              </div>
+              <div className="card">
+                <h3>After</h3>
+                <p className="muted">Post-optimization</p>
+                <div className="optim-img" style={{ backgroundImage: `url(${afterImg})` }} />
+              </div>
+            </div>
+          </section>
+        )
       case 'hero':
         return <Hero key={key} heroContent={content.heroContent} stats={content.stats} heroImage={content.theme.heroImage} />
       case 'services':
