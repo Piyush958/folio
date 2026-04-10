@@ -1,16 +1,13 @@
 ﻿import { motion } from 'framer-motion'
 import type { HeroContent, Stat } from '../types'
-import CanvasScene from './CanvasScene'
+// Minimal hero (no canvas/3D)
 
 const fadeUp = { hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0 } }
 
 const Hero = ({ heroContent, stats, heroImage }: { heroContent: HeroContent; stats: Stat[]; heroImage?: string }) => {
-  const profileImg = heroImage || 'https://github.com/piyushdadheech786-glitch.png'
+  const profileImg = heroImage || 'https://piyushdadheechprotfolio.my.canva.site/_assets/media/faac59b4e0dbcdf03e76cfedb5a0f920.jpg'
   return (
     <section className="section hero-wrap" id="top">
-      <div className="hero-bg" aria-hidden>
-        <CanvasScene />
-      </div>
       <div className="hero">
         <div className="hero-grid">
           <motion.div variants={fadeUp} initial="hidden" animate="show" transition={{ duration: 0.6 }}>

@@ -1,6 +1,6 @@
 ﻿.hero-wrap { overflow: hidden; }
 .hero { display: grid; grid-template-columns: 1fr 0.9fr; gap: 32px; align-items: center; position: relative; }
-.hero-bg { position: absolute; inset: -20%; opacity: 0.35; filter: blur(1px) saturate(1.1); pointer-events: none; }
+.hero-bg { display: none; }
 .hero > * { position: relative; z-index: 1; }
 
 .hero h1 { font-size: clamp(36px, 6vw, 60px); margin-bottom: 10px; }
@@ -22,9 +22,9 @@
 .contact-tile { border: 1px solid var(--border); border-radius: 14px; padding: 14px; background: var(--panel-strong); }
 .footer-note { color: var(--muted); text-align: center; margin-top: 32px; font-size: 14px; }
 
-.profile-card { position: relative; border: 1px solid var(--border); border-radius: var(--radius); background: radial-gradient(circle at 40% 35%, rgba(255,124,229,0.12), transparent 55%), var(--panel); padding: 18px; display: grid; gap: 12px; overflow: hidden; min-height: 420px; box-shadow: var(--shadow); }
+.profile-card { position: relative; border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); padding: 18px; display: grid; gap: 12px; overflow: hidden; min-height: 420px; box-shadow: var(--shadow); }
 .profile-card.full-image { grid-template-rows: auto auto auto; justify-items: center; }
-.profile-glow { position: absolute; inset: -20%; background: radial-gradient(circle at 60% 40%, rgba(140,123,255,0.2), transparent 50%); filter: blur(60px); z-index: 0; }
+.profile-glow { display: none; }
 .profile-img { width: 260px; height: 320px; border-radius: 26px; background-size: cover; background-position: center; border: 2px solid var(--border); box-shadow: 0 12px 40px rgba(0,0,0,0.35); position: relative; z-index: 2; }
 .profile-meta { z-index: 2; text-align: center; }
 .profile-meta h3 { margin: 10px 0 4px; }
