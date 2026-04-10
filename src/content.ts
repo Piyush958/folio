@@ -81,7 +81,7 @@ const siteData: SiteData = {
             tagline: 'React + Python / Node / PHP',
             bullets: [
               'APIs with Django/DRF or Node that stay clean and observable.',
-              'Modern UIs in React + Framer Motion (no gimmicky 3D).',
+              'Modern UIs in React + Framer Motion, focused on clarity..',
               'Secure auth, forms, dashboards, and deployment-ready CI steps.',
             ],
           },
@@ -132,3 +132,4 @@ const siteData: SiteData = {
 
 export const defaultSiteData = siteData
 export const defaultContent: PortfolioContent = siteData.pages[0].content
+

@@ -2,12 +2,10 @@
 import type { HeroContent, Stat } from '../types'
 import CanvasScene from './CanvasScene'
 
-const heroChips = ['Python / Django', 'React / TypeScript', 'Shopify performance', 'Clean, measurable builds']
-
 const fadeUp = { hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0 } }
 
 const Hero = ({ heroContent, stats, heroImage }: { heroContent: HeroContent; stats: Stat[]; heroImage?: string }) => {
-  const profileImg = heroImage || 'https://piyushdadheechprotfolio.my.canva.site/_assets/media/faac59b4e0dbcdf03e76cfedb5a0f920.jpg'
+  const profileImg = heroImage || 'https://github.com/piyushdadheech786-glitch.png'
   return (
     <section className="section hero-wrap" id="top">
       <div className="hero-bg" aria-hidden>
@@ -16,7 +14,7 @@ const Hero = ({ heroContent, stats, heroImage }: { heroContent: HeroContent; sta
       <div className="hero">
         <div className="hero-grid">
           <motion.div variants={fadeUp} initial="hidden" animate="show" transition={{ duration: 0.6 }}>
-            <div className="badge" style={{ marginBottom: 10 }}>Available for freelance · Fast delivery</div>
+            <div className="badge" style={{ marginBottom: 10 }}>Fullstack developer · Performance focus</div>
             <h1>
               {heroContent.name}
               <br />
@@ -26,28 +24,19 @@ const Hero = ({ heroContent, stats, heroImage }: { heroContent: HeroContent; sta
             <p>{heroContent.blurb}</p>
           </motion.div>
 
-          <motion.div
-            className="chips"
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            transition={{ delay: 0.08, duration: 0.5 }}
-          >
-            {heroChips.map((chip) => (
-              <span className="chip" key={chip}>{chip}</span>
-            ))}
-          </motion.div>
-
-          <motion.div className="button-row" variants={fadeUp} initial="hidden" animate="show" transition={{ delay: 0.16 }}>
+          <motion.div className="button-row" variants={fadeUp} initial="hidden" animate="show" transition={{ delay: 0.08 }}>
             <a className="btn primary" href={`mailto:${heroContent.email}`}>
-              Book a project
+              Email me
             </a>
             <a className="btn" href={`tel:${heroContent.phone.replace(/\s+/g, '')}`}>
               Call {heroContent.phone}
             </a>
+            <a className="btn" href="https://github.com/piyushdadheech786-glitch" target="_blank" rel="noreferrer">
+              GitHub Profile
+            </a>
           </motion.div>
 
-          <motion.div className="metric-row" variants={fadeUp} initial="hidden" animate="show" transition={{ delay: 0.22 }}>
+          <motion.div className="metric-row" variants={fadeUp} initial="hidden" animate="show" transition={{ delay: 0.14 }}>
             {stats.map((stat) => (
               <div className="metric" key={stat.label}>
                 <strong>{stat.value}</strong>
