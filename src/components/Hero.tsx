@@ -45,9 +45,6 @@ const Hero = ({ heroContent, stats, heroImage }: { heroContent: HeroContent; sta
             <a className="btn" href={`tel:${heroContent.phone.replace(/\s+/g, '')}`}>
               Call {heroContent.phone}
             </a>
-            <a className="btn" href="https://github.com/piyushdadheech786-glitch" target="_blank" rel="noreferrer">
-              GitHub Profile
-            </a>
           </motion.div>
 
           <motion.div className="metric-row" variants={fadeUp} initial="hidden" animate="show" transition={{ delay: 0.22 }}>
