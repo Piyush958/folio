@@ -2,7 +2,7 @@
 import type { HeroContent, Stat } from '../types'
 import CanvasScene from './CanvasScene'
 
-const heroChips = ['Python / Django', 'React + Three.js', 'Shopify & speed', 'Performance-first builds']
+const heroChips = ['Python / Django', 'React / TypeScript', 'Shopify performance', 'Clean, measurable builds']
 
 const fadeUp = { hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0 } }
 

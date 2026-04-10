@@ -78,10 +78,10 @@ const siteData: SiteData = {
           },
           {
             title: 'Fullstack Product Builds',
-            tagline: 'React / Three.js + Python / Node / PHP',
+            tagline: 'React + Python / Node / PHP',
             bullets: [
               'APIs with Django/DRF or Node that stay clean and observable.',
-              'Animated, narrative UIs using React, Three.js, and Framer Motion.',
+              'Modern UIs in React + Framer Motion (no gimmicky 3D).',
               'Secure auth, forms, dashboards, and deployment-ready CI steps.',
             ],
           },
@@ -113,11 +113,11 @@ const siteData: SiteData = {
         ],
         gallery: [
           { title: 'Ecom speed revamp', desc: 'Shopify theme optimization', image: '' },
-          { title: '3D landing', desc: 'Three.js hero + motion', image: '' },
+          { title: 'Product launch page', desc: 'Hero + motion focused on conversions', image: '' },
         ],
         projects: [
           { title: 'Perf Booster', desc: 'CWV uplift for D2C brand', link: '#', image: '' },
-          { title: 'Interactive Launch', desc: '3D hero with conversions up 18%', link: '#', image: '' },
+          { title: 'Interactive Launch', desc: 'Landing page with clean motion & forms', link: '#', image: '' },
         ],
         testimonials: [
           { quote: 'Pages got visibly faster and conversions ticked up.', name: 'Shop Owner', role: 'Founder' },
