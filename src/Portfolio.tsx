@@ -1,4 +1,4 @@
-﻿import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Hero from './components/Hero'
 import Services from './components/Services'
 import Experience from './components/Experience'
@@ -16,6 +16,8 @@ const beforeImg = '/beforeopt.jpg'
 const afterImg = '/afteropt.jpg'
 
 const Portfolio = ({ content }: { content: PortfolioContent }) => {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   useEffect(() => {
     const root = document.documentElement
     root.style.setProperty('--bg', content.theme.background)
@@ -101,16 +103,20 @@ const Portfolio = ({ content }: { content: PortfolioContent }) => {
   return (
     <>
       {content.theme.stars && <BackgroundScene />}
-      <header className="nav">
+      <div className="nav minimal">
+        <button className="hamburger" onClick={() => setMenuOpen((v) => !v)}>☰</button>
         <div className="brand">PD</div>
-        <div className="nav-links">
-          <a href="#services">Services</a>
-          <a href="#experience">Work</a>
-          <a href="#skills">Skills</a>
-          <a href="#education">Edu</a>
-          <a href="#contact">Contact</a>
+      </div>
+      {menuOpen && (
+        <div className="drawer">
+          <a onClick={() => setMenuOpen(false)} href="#top">Home</a>
+          <a onClick={() => setMenuOpen(false)} href="#projects">Projects</a>
+          <a onClick={() => setMenuOpen(false)} href="#services">Services</a>
+          <a onClick={() => setMenuOpen(false)} href="#experience">Experience</a>
+          <a onClick={() => setMenuOpen(false)} href="#skills">Skills</a>
+          <a onClick={() => setMenuOpen(false)} href="#contact">Contact</a>
         </div>
-      </header>
+      )}
       {content.sectionsOrder.map((s) => renderSection(s))}
       {content.theme.customCss && <style>{content.theme.customCss}</style>}
     </>

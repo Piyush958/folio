@@ -34,9 +34,11 @@
 
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 6px 22px; position: sticky; top: 0; backdrop-filter: blur(14px); z-index: 20; }
 .brand { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; font-weight: 700; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #02040a; box-shadow: 0 10px 25px rgba(255, 124, 229, 0.35); }
-.nav-links { display: flex; gap: 16px; flex-wrap: wrap; }
-.nav-links a { padding: 8px 12px; border-radius: 12px; border: 1px solid transparent; color: var(--text); }
-.nav-links a:hover { border-color: var(--border); background: var(--panel-strong); }
+.nav.minimal { justify-content: flex-start; gap: 10px; }
+.hamburger { width: 40px; height: 40px; border-radius: 12px; border: 1px solid var(--border); background: var(--panel); color: var(--text); font-size: 20px; cursor: pointer; }
+.drawer { position: fixed; top: 60px; left: 12px; background: rgba(10,12,22,0.95); border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); padding: 12px; display: grid; gap: 8px; z-index: 25; min-width: 180px; }
+.drawer a { color: var(--text); padding: 8px 10px; border-radius: 10px; }
+.drawer a:hover { background: var(--panel-strong); }
 
 .page { display: flex; flex-direction: column; gap: 16px; }
 
